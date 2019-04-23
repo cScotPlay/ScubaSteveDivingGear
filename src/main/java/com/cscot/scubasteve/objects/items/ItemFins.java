@@ -16,7 +16,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class ItemFins extends ItemArmor
 {
-
     protected final String name;
     protected final IArmorMaterial material;
     protected final EntityEquipmentSlot armorType;
