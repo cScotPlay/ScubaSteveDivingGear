@@ -1,9 +1,9 @@
 package com.cscot.scubasteve.objects.items;
 
 import com.cscot.scubasteve.ScubaSteve;
-import net.minecraft.init.Items;
-import net.minecraft.init.SoundEvents;
-import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Items;
+import net.minecraft.util.SoundEvents;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.LazyLoadBase;
@@ -40,12 +40,12 @@ public enum ItemWetsuitMaterial implements IArmorMaterial
     }
 
     @Override
-    public int getDurability(EntityEquipmentSlot slotIn) {
+    public int getDurability(EquipmentSlotType slotIn) {
         return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
     }
 
     @Override
-    public int getDamageReductionAmount(EntityEquipmentSlot slotIn) {
+    public int getDamageReductionAmount(EquipmentSlotType slotIn) {
         return this.damageReductionAmount[slotIn.getIndex()];
     }
 
