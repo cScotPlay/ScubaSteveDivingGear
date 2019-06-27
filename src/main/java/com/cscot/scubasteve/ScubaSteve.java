@@ -51,47 +51,48 @@ public class ScubaSteve
     private void setup(final FMLCommonSetupEvent event)
     {
         // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        //LOGGER.info("HELLO FROM PREINIT");
+        //LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+        //LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
     {
         // some cscot code to dispatch IMC to another mod
-        InterModComms.sendTo("scubasteve", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
+        //InterModComms.sendTo("scubasteve", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
     }
 
     private void processIMC(final InterModProcessEvent event)
     {
         // some cscot code to receive and process InterModComms from other mods
-        LOGGER.info("Got IMC {}", event.getIMCStream().
+        /*LOGGER.info("Got IMC {}", event.getIMCStream().
                 map(m->m.getMessageSupplier().get()).
-                collect(Collectors.toList()));
+                collect(Collectors.toList()));*/
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
 
     @SubscribeEvent
     public void postSetup(FMLLoadCompleteEvent event) {
 
+        //This is required to inject Wetsuit Layer for model rendering
         /*RenderManager manager = Minecraft.getInstance().getRenderManager();
         Map<String, RenderPlayer> renderPlayerMap = manager.getSkinMap();
         for(RenderPlayer render : renderPlayerMap.values()) {
             List<LayerRenderer> list = ObfuscationReflectionHelper.getPrivateValue(RenderLivingBase.class, render, "field_177097_h");
-            list.add(new LayerWetsuit(render));
+            list.add(new WetsuitLayer(render));
         }
         Render<?> render = manager.getEntityClassRenderObject(EntityArmorStand.class);
-        ((RenderLivingBase<?>) render).addLayer(new LayerWetsuit((RenderLivingBase<?>) render) {
+        ((RenderLivingBase<?>) render).addLayer(new WetsuitLayer((RenderLivingBase<?>) render) {
         });*/
     }
 
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
         // do something when the server starts
-        LOGGER.info("HELLO from server starting");
+        //LOGGER.info("HELLO from server starting");
     }
 }
