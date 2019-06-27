@@ -11,10 +11,10 @@ import net.minecraft.util.SoundEvent;
 
 import java.util.function.Supplier;
 
-public enum ItemWetsuitMaterial implements IArmorMaterial
+public enum WetsuitMaterial implements IArmorMaterial
 {
     wetsuit("wetsuit", 5, new int[]{1, 2, 3, 1}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, () -> {
-        return Ingredient.fromItems(Items.LEATHER);
+        return Ingredient.fromItems(Items.LEATHER); //TODO Add Repair Ingredient when crafting completed
     }),
     noarmor("noArmor", 0, new int[] {0, 0, 0, 0}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, () -> {
         return Ingredient.fromItems(Items.LEATHER);
@@ -28,7 +28,7 @@ public enum ItemWetsuitMaterial implements IArmorMaterial
     private float toughness;
     private LazyLoadBase<Ingredient> repairMaterial;
 
-    ItemWetsuitMaterial(String nameIn, int durability, int[] damageReductionAmount, int enchantability, SoundEvent equipSound, float toughness, Supplier<Ingredient> repairItem)
+    WetsuitMaterial(String nameIn, int durability, int[] damageReductionAmount, int enchantability, SoundEvent equipSound, float toughness, Supplier<Ingredient> repairItem)
     {
         this.name = nameIn;
         this.maxDamageFactor = durability;
