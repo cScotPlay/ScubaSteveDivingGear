@@ -1,7 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "scubasteve:item/wetsuit_boots",
-        "layer1": "scubasteve:item/wetsuit_boots_overlay"
-    }
-}

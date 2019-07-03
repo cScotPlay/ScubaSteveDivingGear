@@ -6,15 +6,15 @@ import net.minecraftforge.registries.ObjectHolder;
 
 public class WetsuitInit
 {
-    @ObjectHolder(ScubaSteve.MODID + ":wetsuit_helmet")
-    public static Item wetsuit_helmet;
+    @ObjectHolder(ScubaSteve.MODID + ":snorkeling_mask")
+    public static Item snorkeling_mask;
 
-    @ObjectHolder(ScubaSteve.MODID + ":wetsuit_chestplate")
-    public static Item wetsuit_chestplate;
+    @ObjectHolder(ScubaSteve.MODID + ":snorkeling_shirt")
+    public static Item snorkeling_shirt;
 
-    @ObjectHolder(ScubaSteve.MODID + ":wetsuit_leggings")
-    public static Item wetsuit_leggings;
+    @ObjectHolder(ScubaSteve.MODID + ":snorkeling_shorts")
+    public static Item snorkeling_shorts;
 
-    @ObjectHolder(ScubaSteve.MODID + ":wetsuit_boots")
-    public static Item wetsuit_boots;
+    @ObjectHolder(ScubaSteve.MODID + ":snorkeling_fins")
+    public static Item snorkeling_fins;
 }

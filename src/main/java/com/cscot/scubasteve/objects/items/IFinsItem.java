@@ -5,5 +5,5 @@ import net.minecraft.item.ItemStack;
 
 public interface IFinsItem
 {
-    boolean areFinsEnabled(PlayerEntity player, ItemStack stack);
+    boolean areFins(PlayerEntity player, ItemStack stack);
 }

@@ -1,7 +1,9 @@
 package com.cscot.scubasteve.event.entity.living;
 
+import com.cscot.scubasteve.init.WetsuitInit;
 import com.cscot.scubasteve.objects.items.FinsItem;
 import com.cscot.scubasteve.objects.items.IFinsItem;
+import com.cscot.scubasteve.objects.items.IMasksItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -27,7 +29,7 @@ public class ScubaLivingEvent
             ItemStack itemSwimBoots = swimmingPlayer.getItemStackFromSlot(EquipmentSlotType.FEET);
 
             if (swimmingPlayer.isSwimming()){
-                if (itemSwimBoots.getItem() instanceof IFinsItem && ((IFinsItem)itemSwimBoots.getItem()).areFinsEnabled(swimmingPlayer, itemSwimBoots)) {
+                if (itemSwimBoots.getItem() instanceof IFinsItem && ((IFinsItem)itemSwimBoots.getItem()).areFins(swimmingPlayer, itemSwimBoots)) {
                     Vec3d vec3d = swimmingPlayer.getMotion();
                     if (swimmingPlayer.isInWater())
                     {
@@ -55,7 +57,7 @@ public class ScubaLivingEvent
 
         //float startingDensity = event.getDensity();  //Check density values of different locations
 
-        if (snorkelMask != null && snorkelMask.getItem() instanceof ArmorItem) { //TODO Update instanceof with new Interface
+        if (snorkelMask != null && snorkelMask.getItem() instanceof IMasksItem) { //TODO Update instanceof with new Interface
             if (swimmingPlayer.areEyesInFluid(FluidTags.WATER)) {
                 event.setDensity(1.0F); //0.04999028 Vanilla Value
             } else {

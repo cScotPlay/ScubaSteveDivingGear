@@ -1,9 +1,9 @@
 {
-    "itemGroup.scubasteveitemgroup": "Basic Nether Ores",
+    "itemGroup.scubasteveitemgroup": "Scuba Steve's Diving Gear",
 
-    "item.scubasteve.wetsuit_helmet": "Goggles",
-    "item.scubasteve.wetsuit_chestplate": "Wetsuit Shirt",
-    "item.scubasteve.wetsuit_leggings": "Wetsuit Pants",
-    "item.scubasteve.wetsuit_boots": "Snorkeling Fins"
+    "item.scubasteve.snorkeling_mask": "Snorkeling Mask",
+    "item.scubasteve.snorkeling_shirt": "Snorkeling Shirt",
+    "item.scubasteve.snorkeling_shorts": "Snorkeling Shorts",
+    "item.scubasteve.snorkeling_boots": "Snorkeling Fins"
 
 }

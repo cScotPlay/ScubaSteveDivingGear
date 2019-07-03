@@ -7,41 +7,42 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.*;
+import net.minecraft.item.ArmorItem;
+import net.minecraft.item.IArmorMaterial;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class FinsItem extends ArmorItem implements IFinsItem
+public class MaskItem extends ArmorItem implements IMasksItem
 {
     protected final String name;
     protected final IArmorMaterial material;
-    protected final EquipmentSlotType armorType;
+    protected final EquipmentSlotType armorSlot;
 
-    public FinsItem(String nameIn, IArmorMaterial materialIn, EquipmentSlotType slots, Item.Properties builder) {
-        super(materialIn, slots, builder);
+    public MaskItem(String nameIn, IArmorMaterial materialIn, EquipmentSlotType slot, Item.Properties builder) {
+        super(materialIn, slot, builder);
         name = nameIn;
         material = materialIn;
-        armorType = slots;
+        armorSlot = slot;
     }
 
-    @Override
+    /*@Override
     @OnlyIn(Dist.CLIENT)
     public BipedModel getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType equipmentSlot, BipedModel modelBiped)
     {
         return FinsModel.INSTANCE;
-    }
+    }*/
 
-    @Override
+    /*@Override
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType equipmentSlot, String armorTexture)
     {
         return ScubaSteve.MODID + ":textures/models/armor/" + name + ".png";
-    }
+    }*/
 
     @Override
-    public boolean areFins (PlayerEntity player, ItemStack stack)
-    {
+    public boolean isScubaMask (PlayerEntity player, ItemStack stack){
+
         return true;
     }
-
-
 }
