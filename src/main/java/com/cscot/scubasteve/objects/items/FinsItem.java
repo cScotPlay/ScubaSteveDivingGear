@@ -5,12 +5,13 @@ import com.cscot.scubasteve.client.renderer.entity.models.FinsModel;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class FinsItem extends ArmorItem
+public class FinsItem extends ArmorItem implements IFinsItem
 {
     protected final String name;
     protected final IArmorMaterial material;
@@ -34,6 +35,12 @@ public class FinsItem extends ArmorItem
     public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlotType equipmentSlot, String armorTexture)
     {
         return ScubaSteve.MODID + ":textures/models/armor/" + name + ".png";
+    }
+
+    @Override
+    public boolean areFinsEnabled (PlayerEntity player, ItemStack stack)
+    {
+        return true;
     }
 
 
