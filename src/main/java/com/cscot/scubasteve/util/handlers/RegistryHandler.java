@@ -23,21 +23,16 @@ public class RegistryHandler
         public static void onWetsuitRegistry(final RegistryEvent.Register<Item> wetsuitRegisterEvent)
         {
             wetsuitRegisterEvent.getRegistry().registerAll
-                    (
-                            //TODO Check for ItemArmorDyaable update and update all the items
-                            WetsuitInit.wetsuit_helmet = new ArmorItem(WetsuitMaterial.wetsuit, EquipmentSlotType.HEAD, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("wetsuit_helmet")),
-                            WetsuitInit.wetsuit_chestplate = new ArmorItem(WetsuitMaterial.wetsuit, EquipmentSlotType.CHEST, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("wetsuit_chestplate")),
-                            WetsuitInit.wetsuit_leggings = new ArmorItem(WetsuitMaterial.wetsuit, EquipmentSlotType.LEGS, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("wetsuit_leggings")),
-                            WetsuitInit.wetsuit_boots = new FinsItem("wetsuit_boots", WetsuitMaterial.noarmor, EquipmentSlotType.FEET, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("wetsuit_boots"))
-
-
-                    );
+            (
+                    //TODO Check for ItemArmorDyaable update and update all the items
+                    WetsuitInit.wetsuit_helmet = new ArmorItem(WetsuitMaterial.wetsuit, EquipmentSlotType.HEAD, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("wetsuit_helmet")),
+                    WetsuitInit.wetsuit_chestplate = new ArmorItem(WetsuitMaterial.wetsuit, EquipmentSlotType.CHEST, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("wetsuit_chestplate")),
+                    WetsuitInit.wetsuit_leggings = new ArmorItem(WetsuitMaterial.wetsuit, EquipmentSlotType.LEGS, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("wetsuit_leggings")),
+                    WetsuitInit.wetsuit_boots = new FinsItem("wetsuit_boots", WetsuitMaterial.noarmor, EquipmentSlotType.FEET, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("wetsuit_boots"))
+            );
 
             ScubaSteve.LOGGER.info("ItemBlocks Registered");
         }
-
-
-
     }
 
     public static ResourceLocation location (String name)
