@@ -1,9 +1,9 @@
 {
     "itemGroup.scubasteveitemgroup": "Scuba Steve's Diving Gear",
 
-    "item.scubasteve.snorkeling_mask": "Snorkeling Mask",
-    "item.scubasteve.snorkeling_shirt": "Snorkeling Shirt",
-    "item.scubasteve.snorkeling_shorts": "Snorkeling Shorts",
-    "item.scubasteve.snorkeling_boots": "Snorkeling Fins"
+    "item.scubasteve.snorkel_mask": "Snorkel Mask",
+    "item.scubasteve.snorkel_shirt": "Snorkel Shirt",
+    "item.scubasteve.snorkel_shorts": "Snorkel Shorts",
+    "item.scubasteve.snorkel_boots": "Snorkel Fins"
 
 }

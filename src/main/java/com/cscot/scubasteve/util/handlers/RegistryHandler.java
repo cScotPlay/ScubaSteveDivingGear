@@ -26,10 +26,10 @@ public class RegistryHandler
             wetsuitRegisterEvent.getRegistry().registerAll
             (
                     //TODO Check for ItemArmorDyaable update and update all the items
-                    WetsuitInit.snorkeling_mask = new MaskItem("snorkeling_mask", WetsuitMaterial.SNORKELING, EquipmentSlotType.HEAD, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkeling_mask")),
-                    WetsuitInit.snorkeling_shirt = new ArmorItem(WetsuitMaterial.SNORKELING, EquipmentSlotType.CHEST, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkeling_shirt")),
-                    WetsuitInit.snorkeling_shorts = new ArmorItem(WetsuitMaterial.SNORKELING, EquipmentSlotType.LEGS, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkeling_shorts")),
-                    WetsuitInit.snorkeling_fins = new FinsItem("snorkeling_fins", WetsuitMaterial.NO_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkeling_fins"))
+                    WetsuitInit.snorkel_mask = new MaskItem("snorkel_mask", WetsuitMaterial.SNORKEL, EquipmentSlotType.HEAD, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_mask")),
+                    WetsuitInit.snorkel_shirt = new ArmorItem(WetsuitMaterial.SNORKEL, EquipmentSlotType.CHEST, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_shirt")),
+                    WetsuitInit.snorkel_shorts = new ArmorItem(WetsuitMaterial.SNORKEL, EquipmentSlotType.LEGS, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_shorts")),
+                    WetsuitInit.snorkel_fins = new FinsItem("snorkel_fins", WetsuitMaterial.NO_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_fins"))
             );
 
             ScubaSteve.LOGGER.info("ItemBlocks Registered");

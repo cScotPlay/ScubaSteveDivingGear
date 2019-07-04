@@ -13,8 +13,11 @@ import java.util.function.Supplier;
 
 public enum WetsuitMaterial implements IArmorMaterial
 {
-    SNORKELING("snorkeling", 5, new int[]{1, 2, 3, 1}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, () -> {
+    SNORKEL("snorkel", 5, new int[]{0, 1, 2, 0}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, () -> {
         return Ingredient.fromItems(Items.LEATHER); //TODO Add Repair Ingredient when crafting completed
+    }),
+    SCUBA("scuba", 5, new int[]{1, 2, 3, 1}, 15, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, () -> {
+        return Ingredient.fromItems(Items.LEATHER);
     }),
     NO_ARMOR("no_armor", 0, new int[] {0, 0, 0, 0}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0.0F, () -> {
         return Ingredient.fromItems(Items.LEATHER);
