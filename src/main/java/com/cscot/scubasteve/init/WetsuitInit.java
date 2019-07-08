@@ -18,6 +18,9 @@ public class WetsuitInit
     @ObjectHolder(ScubaSteve.MODID + ":snorkel_fins")
     public static Item snorkel_fins;
 
+    @ObjectHolder(ScubaSteve.MODID + ":snorkel_tube")
+    public static Item snorkel_tube;
+
     @ObjectHolder(ScubaSteve.MODID + ":scuba_mask")
     public static Item scuba_maks;
 

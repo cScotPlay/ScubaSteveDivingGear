@@ -4,6 +4,7 @@ import com.cscot.scubasteve.ScubaSteve;
 import com.cscot.scubasteve.init.WetsuitInit;
 import com.cscot.scubasteve.objects.items.FinsItem;
 import com.cscot.scubasteve.objects.items.MaskItem;
+import com.cscot.scubasteve.objects.items.SnorkelItem;
 import com.cscot.scubasteve.objects.items.WetsuitMaterial;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.ArmorItem;
@@ -29,7 +30,8 @@ public class RegistryHandler
                     WetsuitInit.snorkel_mask = new MaskItem("snorkel_mask", WetsuitMaterial.SNORKEL, EquipmentSlotType.HEAD, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_mask")),
                     WetsuitInit.snorkel_shirt = new ArmorItem(WetsuitMaterial.SNORKEL, EquipmentSlotType.CHEST, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_shirt")),
                     WetsuitInit.snorkel_shorts = new ArmorItem(WetsuitMaterial.SNORKEL, EquipmentSlotType.LEGS, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_shorts")),
-                    WetsuitInit.snorkel_fins = new FinsItem("snorkel_fins", WetsuitMaterial.NO_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_fins"))
+                    WetsuitInit.snorkel_fins = new FinsItem("snorkel_fins", WetsuitMaterial.NO_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_fins")),
+                    WetsuitInit.snorkel_tube = new SnorkelItem("snorkel_tube", WetsuitMaterial.NO_ARMOR, EquipmentSlotType.HEAD, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_tube"))
             );
 
             ScubaSteve.LOGGER.info("ItemBlocks Registered");
