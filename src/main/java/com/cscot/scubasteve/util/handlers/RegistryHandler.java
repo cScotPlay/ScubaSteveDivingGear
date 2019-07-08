@@ -27,7 +27,7 @@ public class RegistryHandler
             wetsuitRegisterEvent.getRegistry().registerAll
             (
                     //TODO Check for ItemArmorDyaable update and update all the items
-                    WetsuitInit.snorkel_mask = new MaskItem("snorkel_mask", WetsuitMaterial.SNORKEL, EquipmentSlotType.HEAD, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_mask")),
+                    WetsuitInit.snorkel_goggles = new MaskItem("snorkel_goggles", WetsuitMaterial.SNORKEL, EquipmentSlotType.HEAD, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_goggles")),
                     WetsuitInit.snorkel_shirt = new ArmorItem(WetsuitMaterial.SNORKEL, EquipmentSlotType.CHEST, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_shirt")),
                     WetsuitInit.snorkel_shorts = new ArmorItem(WetsuitMaterial.SNORKEL, EquipmentSlotType.LEGS, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_shorts")),
                     WetsuitInit.snorkel_fins = new FinsItem("snorkel_fins", WetsuitMaterial.NO_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_fins")),

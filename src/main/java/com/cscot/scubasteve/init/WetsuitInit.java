@@ -6,8 +6,8 @@ import net.minecraftforge.registries.ObjectHolder;
 
 public class WetsuitInit
 {
-    @ObjectHolder(ScubaSteve.MODID + ":snorkel_mask")
-    public static Item snorkel_mask;
+    @ObjectHolder(ScubaSteve.MODID + ":snorkel_goggles")
+    public static Item snorkel_goggles;
 
     @ObjectHolder(ScubaSteve.MODID + ":snorkel_shirt")
     public static Item snorkel_shirt;
