@@ -5,5 +5,7 @@ import net.minecraft.item.ItemStack;
 
 public interface IMasksItem
 {
-    boolean isScubaMask(PlayerEntity player, ItemStack stack);
+    boolean isMask(PlayerEntity player, ItemStack stack);
+
+    boolean isSnorkel(PlayerEntity player, ItemStack stack);
 }
