@@ -29,7 +29,7 @@ public class RegistryHandler
                     WetsuitInit.snorkel_goggles = new MaskItem("snorkel_goggles", WetsuitMaterial.SNORKEL, EquipmentSlotType.HEAD, true, false, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_goggles")),
                     WetsuitInit.snorkel_shirt = new ArmorItem(WetsuitMaterial.SNORKEL, EquipmentSlotType.CHEST, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_shirt")),
                     WetsuitInit.snorkel_shorts = new ArmorItem(WetsuitMaterial.SNORKEL, EquipmentSlotType.LEGS, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_shorts")),
-                    WetsuitInit.snorkel_fins = new FinsItem("snorkel_fins", WetsuitMaterial.NO_ARMOR, EquipmentSlotType.FEET, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_fins")),
+                    WetsuitInit.snorkel_fins = new FinsItem("snorkel_fins", WetsuitMaterial.NO_ARMOR, EquipmentSlotType.FEET, true, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_fins")),
                     WetsuitInit.snorkel_tube = new MaskItem("snorkel_tube", WetsuitMaterial.NO_ARMOR, EquipmentSlotType.HEAD, false, true, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_tube")),
                     WetsuitInit.snorkel_mask = new MaskItem("snorkel_mask", WetsuitMaterial.NO_ARMOR, EquipmentSlotType.HEAD, true, true, new Item.Properties().group(ScubaSteve.scubaItemGroup)).setRegistryName(location("snorkel_mask"))
             );
