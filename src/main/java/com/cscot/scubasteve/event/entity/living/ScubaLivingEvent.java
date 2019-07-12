@@ -77,7 +77,7 @@ public class ScubaLivingEvent
         }
     }*/
 
-    @SubscribeEvent(priority=EventPriority.NORMAL, receiveCanceled=true)
+    /*@SubscribeEvent(priority=EventPriority.NORMAL, receiveCanceled=true)
     public static void fogDensityEvent(EntityViewRenderEvent.FogDensity event)
     {
         PlayerEntity swimmingPlayer = Minecraft.getInstance().player;
@@ -94,7 +94,7 @@ public class ScubaLivingEvent
             }
             event.setCanceled(true); // must cancel event for event handler to take effect
         }
-    }
+    }*/
 
     /*private void updateSnorkel(TickEvent.PlayerTickEvent player) {
         //PlayerEntity swimmingPlayer = player;
