@@ -15,8 +15,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class FinsItem extends ArmorItem implements IFinsItem
 {
     private final String name;
-    //private final IArmorMaterial material;  //Variable not used
-    //private final EquipmentSlotType armorType;  //Variable not used
     private final Boolean finCheck;
 
     private static final double SPEED_MULT = 1.04; //TODO update variables when new items are added
@@ -25,8 +23,6 @@ public class FinsItem extends ArmorItem implements IFinsItem
     public FinsItem(String nameIn, IArmorMaterial materialIn, EquipmentSlotType slots, Boolean isFin, Item.Properties builder) {
         super(materialIn, slots, builder);
         name = nameIn;
-        //material = materialIn;  //Variable not used
-        //armorType = slots;  //Variable not used
         finCheck = isFin;
     }
 
