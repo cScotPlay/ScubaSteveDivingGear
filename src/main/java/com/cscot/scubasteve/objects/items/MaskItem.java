@@ -22,6 +22,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityViewRenderEvent;
+import org.lwjgl.opengl.GL11;
 
 public class MaskItem extends ArmorItem implements IMasksItem
 {
@@ -68,7 +69,7 @@ public class MaskItem extends ArmorItem implements IMasksItem
     public void onArmorTick(ItemStack itemMask, World world, PlayerEntity swimmingPlayer)
     {
         this.getSnorkelAir(itemMask, swimmingPlayer);
-        this.maskVision(itemMask, swimmingPlayer);
+        //this.maskVision(itemMask, swimmingPlayer);
     }
 
     @Override
@@ -86,13 +87,15 @@ public class MaskItem extends ArmorItem implements IMasksItem
         if (((IMasksItem)itemMask.getItem()).isSnorkel(swimmingPlayer, itemMask) && !swimmingPlayer.areEyesInFluid(FluidTags.WATER)) {
             swimmingPlayer.addPotionEffect(new EffectInstance(Effects.WATER_BREATHING, 400, 0, false, false, false));
         }
-        else onUnequipped(itemMask, swimmingPlayer);
+        //else onUnequipped(itemMask, swimmingPlayer);
     }
 
     private void maskVision(ItemStack itemMask, PlayerEntity swimmingPlayer)
     {
         if(maskCheck && swimmingPlayer.areEyesInFluid(FluidTags.WATER)) {
-            swimmingPlayer.addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, Integer.MAX_VALUE, -42, false, false, true));
+            float swimmerDepth = 63 - swimmingPlayer.getPosition().getY();
+            //GL11.glFogf(GL11.GL_FOG_DENSITY, 0.025f + 0.0025f * swimmerDepth);
+            //swimmingPlayer.addPotionEffect(new EffectInstance(Effects.NIGHT_VISION, 100, -42, false, false, true)); //Integral.MaxValue
         }
         else onUnequipped(itemMask, swimmingPlayer);
     }
