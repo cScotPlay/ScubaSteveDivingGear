@@ -1,12 +1,7 @@
 package com.cscot.scubasteve.objects.items;
 
 import com.cscot.scubasteve.ScubaSteve;
-import com.cscot.scubasteve.client.renderer.entity.models.FinsModel;
 import com.cscot.scubasteve.client.renderer.entity.models.SnorkelModel;
-import com.cscot.scubasteve.event.entity.living.ScubaLivingEvent;
-import net.minecraft.client.renderer.ActiveRenderInfo;
-import net.minecraft.client.renderer.FogRenderer;
-import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.entity.model.BipedModel;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -22,8 +17,6 @@ import net.minecraft.tags.FluidTags;
 import net.minecraft.world.World;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.EntityViewRenderEvent;
-import org.lwjgl.opengl.GL11;
 
 public class MaskItem extends ArmorItem implements IMasksItem
 {
