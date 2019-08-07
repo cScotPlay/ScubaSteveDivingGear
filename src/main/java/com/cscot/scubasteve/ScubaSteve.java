@@ -1,5 +1,6 @@
 package com.cscot.scubasteve;
 
+import com.cscot.scubasteve.client.gui.GoggleIngameGui;
 import com.cscot.scubasteve.util.itemgroups.ScubaItemGroup;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
@@ -58,6 +59,8 @@ public class ScubaSteve
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         //LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+
+        MinecraftForge.EVENT_BUS.register(new GoggleIngameGui());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
