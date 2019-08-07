@@ -13,6 +13,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.lwjgl.opengl.GL11;
 
+@SuppressWarnings("unused")
 @Mod.EventBusSubscriber
 public class ScubaLivingEvent
 {
@@ -26,7 +27,7 @@ public class ScubaLivingEvent
                 GlStateManager.fogMode(GlStateManager.FogMode.LINEAR);
                 GL11.glFogf(GL11.GL_FOG_DENSITY, 0.015f);
             }
-            //TODO Look at Fog Start and End
+           //TODO Look at Fog Start and End
         }
     }
 }
